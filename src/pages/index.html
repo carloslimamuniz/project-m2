@@ -1,14 +1,150 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/style/style.css   ">
-    <title>Document</title>
+    <title>Hackathon Brasil</title>
+    <link rel="stylesheet" href="/src/style/style.css">
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
-    
+    <header class="header">
+        <a href="#inicio" class="logo">Hackathon<span>Brasil</span></a>
+        <i class="bx bx-menu" id="menu-icon"></i>
+        <nav class="navbar">
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Informaçoes e Recursos</a>
+            <a href="#eventos">Historias e Depoimentos</a>
+            <a href="#projetos">Projetos e iniciativas</a>
+            <a href="#contato">Venha participar do nosos hackthon!</a>
+        </nav>
+        <button class="gradient-btn">Participe Agora</button>
+    </header>
 
- <script src="/src/pages/script/script.js"></script>
+    <section class="inicio" id="inicio">
+        <div class="conteudo-inicio">
+            <h1>Bem-vindo ao <span>Hackathon Brasil</span></h1>
+            <h3>Inovação e Tecnologia</h3>
+            <p>Junte-se a nós para criar soluções inovadoras e transformar o futuro.</p>
+            <div class="icones-redesociais">
+                <a href="#"><i class="bx bxl-github"></i></a>
+                <a href="#"><i class="bx bxl-linkedin-square"></i></a>
+                <a href="#"><i class="bx bxl-instagram-alt"></i></a>
+            </div>
+            <div class="btn-group">
+                <a href="#" class="btn">Saiba Mais</a>
+                <a href="#contato" class="btn">Contato</a>
+            </div>
+        </div>
+        <div class="imagem-inicio">
+            <img src="hackathon.jpg" alt="Hackathon">
+        </div>
+    </section>
+
+    <section class="sobre-mim" id="sobre">
+        <div class="sobre-img">
+            <img src="sobre.jpg" alt="Sobre">
+        </div>
+        <div class="about-content">
+            <h2>Sobre <span>Nós</span></h2>
+            <p>O Hackathon Brasil é um evento que reúne programadores, designers e outros profissionais de tecnologia para criar soluções inovadoras em um curto período de tempo.</p>
+            <a href="#" class="btn">Ler Mais</a>
+        </div>
+    </section>
+
+    <section class="serviços" id="eventos">
+        <h2 class="heading">Eventos</h2>
+        <div class="serviços-container">
+            <div class="serviços-box">
+                <div class="serviços-info">
+                    <i class="bx bxl-figma"></i>
+                    <h4>Design Sprint</h4>
+                    <p>Participe de nossos sprints de design para criar interfaces intuitivas e atraentes.</p>
+                </div>
+            </div>
+            <div class="serviços-box">
+                <div class="serviços-info">
+                    <i class="bx bx-code"></i>
+                    <h4>Desenvolvimento Web</h4>
+                    <p>Desenvolva soluções web inovadoras e responsivas durante nossos hackathons.</p>
+                </div>
+            </div>
+            <div class="serviços-box">
+                <div class="serviços-info">
+                    <i class="bx bx-code-curly"></i>
+                    <h4>Desenvolvimento de APIs</h4>
+                    <p>Crie e integre APIs robustas e eficientes em nossos eventos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projetos" id="projetos">
+        <h2 class="heading">Projetos e iniciativas</h2>
+        <div class="projetos-box">
+            <div class="projeto-card">
+                <img src="projeto1.jpg" alt="Projeto 1">
+                <h3>Projeto 1</h3>
+                <p>Descrição do projeto 1.</p>
+                <div class="btn">Ver Projeto</div>
+            </div>
+            <div class="projeto-card">
+                <img src="projeto2.jpg" alt="Projeto 2">
+                <h3>Projeto 2</h3>
+                <p>Descrição do projeto 2.</p>
+                <div class="btn">Ver Projeto</div>
+            </div>
+            <div class="projeto-card">
+                <img src="projeto3.jpg" alt="Projeto 3">
+                <h3>Projeto 3</h3>
+                <p>Descrição do projeto 3.</p>
+                <div class="btn">Ver Projeto</div>
+            </div>
+            <div class="projeto-card">
+                <img src="projeto4.jpg" alt="Projeto 4">
+                <h3>Projeto 4</h3>
+                <p>Descrição do projeto 4.</p>
+                <div class="btn">Ver Projeto</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contato" id="contato">
+        <h2 class="heading"> Venha <span>Participar!</span></h2>
+        <form action="#">
+            <div class="input-group">
+                <div class="input-box">
+                    <input type="text" placeholder="Nome Completo">
+                    <input type="email" placeholder="Email">
+                </div>
+                <div class="input-box">
+                    <input type="number" placeholder="Número de Telefone">
+                    <input type="text" placeholder="Assunto">
+                </div>
+            </div>
+            <div class="input-group-2">
+                <textarea name="" id="" placeholder="Sua Mensagem" cols="30" rows="10"></textarea>
+                <input type="submit" value="Enviar Mensagem" class="btn">
+            </div>
+        </form>
+    </section>
+
+    <footer class="footer">
+        <div class="icones-redesociais">
+            <a href="#"><i class="bx bxl-github"></i></a>
+            <a href="#"><i class="bx bxl-linkedin-square"></i></a>
+            <a href="#"><i class="bx bxl-instagram-alt"></i></a>
+        </div>
+        <ul class="lista">
+            <li><a href="#">Dúvidas Frequentes</a></li>
+            <li><a href="#eventos">Eventos</a></li>
+            <li><a href="#sobre">Informaçoes e Recursos</a></li>
+            <li><a href="#projetos">Projetos e iniciativas</a></li>
+            <li><a href="#contato">Contato</a></li>
+        </ul>
+        <p class="copyright">Hackathon Brasil / Todos os direitos reservados</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
