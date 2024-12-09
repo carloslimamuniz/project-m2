@@ -1,0 +1,1 @@
+1. fazer a classe projeto que recena o nome, se já possui equipe ou não, se é o lider da equipe, quantos integrante tem e a descrção da solução. Esse projeto vai aparecer na parte de projetos escritos, mas apenas com o nome e o autor em uma lista
