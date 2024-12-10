@@ -187,3 +187,22 @@ section {
     border-top: 1px solid rgba(255,255,255,0.1);
 }
 
+/* Desing responsivo */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .inicio h1 {
+        font-size: 2rem;
+    }
+    
+    .inicio-conteudo {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .botao-sobre {
+        margin-left: 0;
+    }
+}
