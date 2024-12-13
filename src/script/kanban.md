@@ -2,26 +2,39 @@
 
 
 
+Prioridades
+1 low
+2 medium
+3 urgent
 
 
 
+ATENÇÃO preciso que alguem faça: 
+-a documentação  3
+-Melhore a navbar, ao clicar na logo voltar a pagina inicial, e seu estilo  2
+-coloque ou melhore as informanções na pagina inicial(index) 2
+-Adicione as redes sociais dos integrantes do grupo no footer de cada pagina, ou faça um poo para isso  1
+-Veja qual vai ser do hackaton, e altere onde ele aparece(navabars, footers)  1
+-E trabalhe ou finalize sua propria parte ...  3
 
 .............
 Matheus Pestana
 
 TO DO 
--arrumar indexações para nao dar bug github pages
+-arrumar indexações para nao dar bug github pages  3
     mudar o index de lugar
-    alterar local paginas
--Ajudar na tela de cadastros
--fazer uma navbar com poo
+    Organização arquivos
+-Implementar poo em mais paginas  2
 
 DOING
--bases paginas
--css base paginas 
+-bases paginas  1
+-css base paginas  1
+-Mais paginas 2
 
 DONE
 -reformulaçao geral base, html e css, index e main
 -arquivos necessarios
--html "informacoes" e css
+-Pagina "index" html css 
+-Pagina "informacoes" html css e js
+
 ............
