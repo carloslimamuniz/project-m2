@@ -1,32 +1,26 @@
+const names = new Array();
+const areas = new Array();
+const professions = new Array();
+const teams= new Array();
+const teamSizes = new Array();
+const solutions = new Array();
 
 class Project{
-    constructor(name, area, role, hasTeam, isLeader, teamSize){
+    constructor(name, area, profession, team, teamSize, leader, solution){
         this.name = name;
         this.area = area;
-        this.role = role;
-        this.hasTeam = hasTeam;
-        this.isLeader = isLeader;
+        this.profession = profession;
+        this.team = team;
         this.teamSize = teamSize;
+        this.leader = leader;
+        this.solution = solution;
     }
-}
-
-//classe Principal Para gerenciar projetos
-
-class projectManager{
-    constructor(){
-        this.projecs = [];
-        this.form = document.getElementById("registrationForm");
-        this.table = document.getElementById("projectsTable");
-        this.tableBody = this.table.querySelector("tbody");
-        this.toggleButton = document.getElementById("toggleProjectsButton");
-        this.submitButton = document.getElementById("submitButton");
-        this.init();
+    verification(){
+        if(name && area && profession && team && tesmSize && solution){
+            return new Project(name, area, profession, team, teamSize, solution)
+        }else{
+            alert("Por favor, preencha todos os campos")
+        }
     }
-
-    //inicializa os eventos
-
-    init(){
-        this.submitButton.addEventListener("click", () => this.addProject());
-        this.toggleButton.addEventListener("click", ()=> this.toggleTable());
-    }
+  
 }

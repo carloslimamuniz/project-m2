@@ -1,84 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
     <link rel="stylesheet" href="/src/style/cadastro.css">
+    <title>cadastroProjetos</title>
 </head>
-
 <body>
-    <center>
-        <h2>Cadastro</h2>
-        <form id="registrationForm">
-            <label for="name">NOME COMPLETO</label>
-            <input type="text" name="name" id="name">
+        <h1>CADASTRO</h1>
+        <form action="">
+            <label for="name">NOME COMPLETO:</label>
+            <input type="text" id="name" required>
 
-            <label for="area">QUAL TUA ÁREA DE ATUAÇÃO?</label>
-            <input type="text" name="area" id="area">
+            <label for="area">QUAL TUA ÁREA DE ATAÇÃO?</label>
+            <input type="text" id="area" required>
 
-            <label for="cargo">QUAL TEU CARGO?</label>
-            <input type="text" name="cargo" id="cargo">
+            <label for="profesion">QUAL A TUA PROFISSÃO</label>
+            <input type="text" id="profession" required>
 
-            <p>VOCÊ POSSUI EQUIPE?</p>
-            <label>
-                <input type="radio" name="team" value="SIM" id="teamYes">SIM
-            </label>
-            
-            <label>
-                <input type="radio" name="team" value="NAO" id="teamNo">NÃO
-            </label>
+            <label for="team">POSSUI EQUIPE?</label>
+            <input type="text" id="team" required placeholder="S ou N">
 
-            <p>VOCÊ É LIDER DA SUA EQUIPE?</p>
-            <label>
-                <input type="radio" name="leadership" value="SIM" id="leaderYes">SIM
-            </label>
-            <label>
-                <input type="radio" name="leadership" value="NAO" id="leaderNo">NÃO
-            </label>
+            <label for="teamSize">QUANTOS MENBROS SUA EQUIPE POSSUI?</label>
+            <input type="text" id="teamSize" required placeholder="De 1 a 8 incluindo você.">
 
-            <label for="teamSize">QUANTOS INTEGRANTES A SUA EQUIPE POSSUI?</label>
-            <select name="teamSize" id="teamSize">
-                <option value="" disabled selected>SELECIONE</option>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-            </select>
+            <label for="leader">VOCÊ É O(A) LIDER DA EQUIPE?</label>
+            <input type="text" id="leader" required placeholder="S ou N">
 
-            <label for="solution">PROPOSTADE SOLUÇÂO</label>
-            <textarea name="proposta" id="proposta" cols="30" rows="10"></textarea>
-
-            <button type="button" id="submitButtton">Enviar</button>
+            <label for="solution">PROPOSTA DE SOLUÇÃO</label>
+            <textarea name="solution" id="solution" cols="30" rows="10" placeholder="Se houver..."></textarea>
+            <button type="button">SALVAR</button>
         </form>
-
-        <button id="toggleProjectButton">Mostrar Projetos</button>
- 
-        //IMPORTANTE: rtirar essa estilização direta na tag
-
-        <table id="projectsTable" style="display: none; margin-top:20px; border: 1px solid black;">
-            <thead>
-                <tr>
-                    <th>Nome</th>
-                    <th>Área</th>
-                    <th>Cargo</th>
-                    <th>Possui Equipe</th>
-                    <th>É lider</th>
-                    <th>Tamanho da equipe</th>
-                </tr>
-            </thead>
-            <tbody>
-
-            </tbody>
-        </table>
-
-        
-    </center>
-
-    <script src="/src/script/cadastroProjeto.js"></script>
+        <script src="src/script/cadastroProjeto.js"></script>
 </body>
 </html>
