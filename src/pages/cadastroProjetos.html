@@ -3,14 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/src/style/cadastro.css">
     <title>cadastroProjetos</title>
+    <link rel="stylesheet" href="/src/style/cadastro.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
+    <nav class="navbar">
+        <div class="logo">CanudinhosHack 2024</div>
+        <ul class="nav-links">
+            <li><a href="../pages/informacoes.html">Informações</a></li>
+            <li><a href="../pages/historias.html">Histórias</a></li>
+            <li><a href="../pages/projetos.html">Projetos</a></li>
+            <li><a href="../pages/programacao.html">Programação e agenda</a></li>
+            <li><a href="../pages/cadastroProjetos.html" class="cta-button">Participar</a></li>
+        </ul>
+    </nav>
+    <main>
+       
         <h1>CADASTRO</h1>
-        <form action="">
-            <label for="name">NOME COMPLETO:</label>
-            <input type="text" id="name" required>
+        <form id="registrationForm">
+            <label for="name">NOME COMPLETO</label>
+            <input type="text" name="name" id="name">
 
             <label for="area">QUAL TUA ÁREA DE ATAÇÃO?</label>
             <input type="text" id="area" required>
@@ -29,8 +44,54 @@
 
             <label for="solution">PROPOSTA DE SOLUÇÃO</label>
             <textarea name="solution" id="solution" cols="30" rows="10" placeholder="Se houver..."></textarea>
-            <button type="submit">SALVAR</button>
+            <button id="btn-save" type="submit">SALVAR</button>
         </form>
-        <script src="src/script/cadastroProjeto.js"></script>
+
+        <button id="toggleProjectButton" class="button-49">Mostrar Projetos</button>
+ 
+        
+
+        <table id="projectsTable" style="display: none; margin-top:20px; border: 1px solid black;">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Área</th>
+                    <th>Cargo</th>
+                    <th>Possui Equipe</th>
+                    <th>É lider</th>
+                    <th>Tamanho da equipe</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+
+        
+    </main>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CanudinhosHack 2024</h4>
+                    <p>Transformando ideias em soluções para um futuro sem poluição plástica.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p>Email: CanudinhosHack@</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociais Grupo</h4>
+                    <div class="social-links">
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Canudinhoshack. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+    <script src="/src/script/cadastroProjeto.js"></script>
 </body>
 </html>
