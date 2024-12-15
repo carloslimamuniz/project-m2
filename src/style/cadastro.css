@@ -1,78 +1,196 @@
-:root {
-    --primary-color: #2ecc71;
-    --secondary-color: #27ae60;
-    --dark-color: #2c3e50;
-    --light-color: #ecf0f1;
-    --accent-color: #3498db;
-    --danger-color: #e74c3c;
-    --text-color: #333;
-    --background-color: #f9f9f9;
+@import url("../style/main.css");
+
+* {
+  box-sizing: border-box;
 }
 
-
-
+:root {
+  --primary-color: #2ecc71;
+  --secondary-color: #27ae60;
+  --dark-color: #2c3e50;
+  --light-color: #ecf0f1;
+  --accent-color: #3498db;
+  --danger-color: #e74c3c;
+  --text-color: #333;
+  --background-color: #f9f9f9;
+  font-size: 62.5%;
+}
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-    background-color: var(--background-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 2rem;
+  overflow-x: hidden;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+
+  margin-block: 10rem;
+}
 
 h1 {
-    text-align: center;
-    margin-bottom: 1rem;
-    color: var(--primary-color);
+  text-align: center;
+  font-family: "Poppins";
+  font-weight: 900;
+  margin-bottom: 6rem;
 }
-
 
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    background-color: var(--light-color);
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 2px 10px rgba(230, 14, 14, 0.1);
-}
-
-input, label, textarea, button {
-    width: 100%;
-    max-width: 400px;
-    text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 70rem;
+  justify-content: center;
+  background-color: var(--background-color);
+  align-items: center;
 }
 
 label {
-    font-weight: bold;
-    margin-bottom: 5px;
+  font-family: "Poppins" sans-serif;
+  font-weight: 700;
+  margin-block: 1rem;
 }
 
-input, textarea {
-    padding: 0.5rem;
-    border: 1px solid var(--dark-color);
-    border-radius: 5px;
-    background-color: var(--background-color);
+input {
+  width: 100%;
+  max-width: 50rem;
+  min-height: 4rem;
+  border-radius: 4px;
+  border: 1px solid #7e7e7e;
+  padding-inline: 1rem;
 }
 
-button {
-    padding: 0.75rem;
-    border: none;
-    border-radius: 5px;
-    background-color: var(--primary-color);
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+#toggleProjectButton {
+  background-color: #94d9e6a1;
+  font-family: "Poppins";
+
+  width: 100%;
+  max-width: 50rem;
+  min-height: 4rem;
+  border-radius: 4px;
+  border: 1px solid gray;
+  cursor: pointer;
 }
 
-button:hover {
-    background-color: var(--secondary-color);
+#btn-save {
+  margin-top: 2rem;
+  width: 100%;
+  max-width: 50rem;
+  min-height: 4rem;
+  border-radius: 4px;
+  background-color: #fff;
+  border: 1px solid gray;
+  filter: brightness(0.9);
+  cursor: pointer;
+
+  
 }
 
+/* CSS */
+.button-49,
+.button-49:after {
+  width: 150px;
+  height: 76px;
+  line-height: 78px;
+  font-size: 20px;
+  font-family: 'Bebas Neue', sans-serif;
+  background: linear-gradient(45deg, transparent 5%, #2ecc71 5%);
+  border: 0;
+  color: #fff;
+  letter-spacing: 3px;
+  box-shadow: 6px 0px 0px #00E6F6;
+  outline: transparent;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-49:after {
+  --slice-0: inset(50% 50% 50% 50%);
+  --slice-1: inset(80% -6px 0 0);
+  --slice-2: inset(50% -6px 30% 0);
+  --slice-3: inset(10% -6px 85% 0);
+  --slice-4: inset(40% -6px 43% 0);
+  --slice-5: inset(80% -6px 5% 0);
+  
+  content: 'CanudinhosHack 2024';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #2ecc71 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+  clip-path: var(--slice-0);
+}
+
+.button-49:hover:after {
+  animation: 1s glitch;
+  animation-timing-function: steps(2, end);
+}
+
+@keyframes glitch {
+  0% {
+    clip-path: var(--slice-1);
+    transform: translate(-20px, -10px);
+  }
+  10% {
+    clip-path: var(--slice-3);
+    transform: translate(10px, 10px);
+  }
+  20% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 10px);
+  }
+  30% {
+    clip-path: var(--slice-3);
+    transform: translate(0px, 5px);
+  }
+  40% {
+    clip-path: var(--slice-2);
+    transform: translate(-5px, 0px);
+  }
+  50% {
+    clip-path: var(--slice-3);
+    transform: translate(5px, 0px);
+  }
+  60% {
+    clip-path: var(--slice-4);
+    transform: translate(5px, 10px);
+  }
+  70% {
+    clip-path: var(--slice-2);
+    transform: translate(-10px, 10px);
+  }
+  80% {
+    clip-path: var(--slice-5);
+    transform: translate(20px, -10px);
+  }
+  90% {
+    clip-path: var(--slice-1);
+    transform: translate(-10px, 0px);
+  }
+  100% {
+    clip-path: var(--slice-1);
+    transform: translate(0);
+  }
+}
+
+@media (min-width: 768px) {
+  .button-49,
+  .button-49:after {
+    width: 200px;
+    height: 86px;
+    line-height: 88px;
+  }
+}
