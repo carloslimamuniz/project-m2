@@ -1,13 +1,13 @@
-const names = new Array();
-const areas = new Array();
-const professions = new Array();
-const teams= new Array();
-const teamSizes = new Array();
-const leaders = new Array();
-const solutions = new Array();
+const names = [];
+const areas = [];
+const professions = [];
+const teams = [];
+const teamSizes = [];
+const leaders = [];
+const solutions = [];
 
-class Project{
-    constructor(name, area, profession, team, teamSize, leader, solution){
+class Project {
+    constructor(name, area, profession, team, teamSize, leader, solution) {
         this.name = name;
         this.area = area;
         this.profession = profession;
@@ -17,51 +17,95 @@ class Project{
         this.solution = solution;
     }
 
-    readData(){
-        this.name = document.getElementById("name").value;
-        this.area = document.getElementById("area").value;
-        this.profession = document.getElementById("profession");
-        this.team = document.getElementById("team").value;
+    readData() {
+        // Lê os valores dos inputs
+        this.name = document.getElementById("name").value.trim();
+        this.area = document.getElementById("area").value.trim();
+        this.profession = document.getElementById("profession").value.trim();
+        this.team = document.getElementById("team").value.trim().toUpperCase();
         this.teamSize = Number(document.getElementById("teamSize").value);
-        this.leader = document.getElementById("leader").value;
-        this.solution = document.getElementById("solution").value;
+        this.leader = document.getElementById("leader").value.trim().toUpperCase();
+        this.solution = document.getElementById("solution").value.trim();
     }
 
-    verifyData(){
+    verifyData() {
         this.readData();
 
-        if( typeof this.name !== 'string' || typeof this.area !== 'string' || typeof this.profession !== 'string' || this.team !== 'S' && this.team !== 'N' || typeof this.teamSize !== 'number' || this.leader !== 'S' && this.leader !== 'N'|| typeof this.solution !== 'string'){
-
-            alert('Por favor, preencha todos os campos corretamente!')
-
+        if (
+            this.name === "" ||
+            this.area === "" ||
+            this.profession === "" ||
+            (this.team !== "S" && this.team !== "N") ||
+            isNaN(this.teamSize) || this.teamSize < 1 || this.teamSize > 8 ||
+            (this.leader !== "S" && this.leader !== "N") ||
+            this.solution === ""
+        ) {
+            alert('Por favor, preencha todos os campos corretamente!');
             return null;
+        }
 
-        }else{
+        return new Project(
+            this.name,
+            this.area,
+            this.profession,
+            this.team,
+            this.teamSize,
+            this.leader,
+            this.solution
+        );
+    }
 
-            return new Project(
-                this.name, 
-                this.area, 
-                this.profession,
-                this.team,
-                this.leader, 
-                this.teamSize, 
-                this.solution
-            )
+    saveData() {
+        let newProject = this.verifyData();
+        if (newProject) {
+            // Adiciona os dados aos arrays
+            names.push(newProject.name);
+            areas.push(newProject.area);
+            professions.push(newProject.profession);
+            teams.push(newProject.team);
+            teamSizes.push(newProject.teamSize);
+            leaders.push(newProject.leader);
+            solutions.push(newProject.solution);
+
+            alert("Projeto salvo com sucesso!");
+            this.clearForm();
         }
     }
 
-    saveData(){
-      let newProjec =  this.verifyData();
+    listData() {
+        let tbody = document.querySelector("tbody");
+        tbody.innerHTML = ""; // Limpa a tabela antes de adicionar os dados
 
-      if(newProjec){
-        names.push(newProjec.name);
-        areas.push(newProjec.area);
-        professions.push(newProjec.profession);
-        teams.push(newProjec.team);
-        teamSizes.push(newProjec.teamSize);
-        leaders.push(newProjec.leader);
-        solutions.push(newProjec.solution)
-      }
+        for (let i = 0; i < names.length; i++) {
+            const row = document.createElement("tr");
 
+            row.innerHTML = `
+                <td>${names[i]}</td>
+                <td>${areas[i]}</td>
+                <td>${professions[i]}</td>
+                <td>${teams[i]}</td>
+                <td>${teamSizes[i]}</td>
+                <td>${leaders[i]}</td>
+                <td>${solutions[i]}</td>
+            `;
+
+            tbody.appendChild(row);
+        }
+    }
+
+    clearForm() {
+        // Limpa os campos do formulário
+        document.getElementById("registrationForm").reset();
     }
 }
+
+const projectInstance = new Project();
+
+document.getElementById("btn-save").addEventListener("click", (event) => {
+    event.preventDefault(); // Evita o recarregamento do formulário
+    projectInstance.saveData();
+});
+
+document.getElementById("genericalButton").addEventListener("click", () => {
+    projectInstance.listData();
+});
