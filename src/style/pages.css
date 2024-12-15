@@ -1,3 +1,16 @@
+:root {
+    --primary-color: #2ecc71;
+    --secondary-color: #27ae60;
+    --dark-color: #2c3e50;
+    --light-color: #ecf0f1;
+    --accent-color: #3498db;
+    --danger-color: #00d9ff;
+    --text-color: #333;
+    --background-color: #f9f9f9;
+}
+
+
+
 /* Estilos comuns para todas as páginas */
 .page-content {
     padding-top: 80px;
@@ -23,6 +36,7 @@
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
+    border: 2px solid var(--primary-color)
 }
 
 .info-card:hover {
@@ -57,12 +71,113 @@
 
 
 /* Estilos para a página de Histórias */
+.stoy-section {
+    padding: 4rem 0;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.story-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    border: 2px solid var(--primary-color)
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+}
+
+.story-card h2 {
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.story-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.story-card ul li {
+    margin-bottom: 0.5rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.story-card ul li:before {
+    content: "•";
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+}
 
 
 
 /* Estilos para a página de Projetos */
 
+.heading { font-size: 2.5rem; color: var(--dark-color); margin-bottom: 2rem; }
+.projetos {
+    background-color: var(--background-color);
+  }
+  .projetos-box {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    place-items: center;
+    gap: 5rem;
+    row-gap: 5rem;
+  }
+  .projeto-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: var(--background-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 3rem;
+    gap: 3rem;
+    padding: 5rem 2rem;
+    overflow: hidden;
+    cursor: pointer;
+    box-shadow: 0 0 5px var(--primary-color);
+    transition: 0.3s ease;
+    
+  }
+  .projeto-card:hover {
+    box-shadow: 0 0 25px var(--primary-color), 0 0 25px var(--primary-color);
+    transform: scale(1.02);
+  }
+  .projeto-card img {
+    max-width: 200px;
+  }
 
+
+  .btn {
+    display: inline-block;
+    padding: 1rem 3rem;
+    background-color: var(--primary-color);
+    box-shadow: 0 0 25px var(--primary-color);
+    border-radius: 3rem;
+    font-size: 1.8rem;
+    color: #080808;
+    border: 2px solid transparent;
+    font-weight: 600px;
+    transition: 0.3s ease-in-out;
+  }
+  .btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color);
+  }
 
 /* Estilos para a página de Programação */
 

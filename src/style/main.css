@@ -28,15 +28,32 @@ body {
     padding: 0 20px;
 }
 
+
+span{
+    background: linear-gradient(
+      270deg,#065592 10%,
+      #02f32a 100%
+    );
+    background-clip: text; 
+    color: transparent;             
+  }
+
 /* Navbar */
 .navbar {
-    background-color: white;
+    background-color: rgba(2, 177, 54, 0.7);
     padding: 1rem 2rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 5px hwb(113 0% 1% / 0.808);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 0.2rem;
+    background: linear-gradient(
+      270deg,#098ef3 10%,
+      #02f32a 100%)
 }
 
 .nav-links {
@@ -62,6 +79,22 @@ body {
     font-size: 1.5rem;
     font-weight: bold;
     color: var(--primary-color);
+    max-width: 100px;
+    cursor: pointer;
+transition: 0.3s ease-in-out;
+}
+
+.logo:hover{
+    transform: scale(1.1);
+  }
+
+.logo img {
+    margin: auto;
+    height: 50px; /* Ajuste a altura conforme necessário */
+    width: auto; /* Mantém a proporção da imagem */
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--primary-color);
+    transition: 0.4s ease-in-out;
 }
 
 /* inicio Section */
@@ -79,6 +112,7 @@ body {
 
 .inicio-conteudo {
     max-width: 800px;
+    padding-top: 2rem;
 }
 
 .inicio h1 {
@@ -91,14 +125,39 @@ body {
     margin-bottom: 2rem;
 }
 
+.logo-inicio{
+    width: 20vw;
+    border-radius: 50%;
+    box-shadow: 0 0 25px var(--main-color);
+    transition: 0.4s ease-in-out;
+  
+  }
+  .imagem-inicio{
+    padding: 2.25rem 1rem
+  }
+
+  .logo-inicio:hover{
+    box-shadow: 0 0 25px var(--main-color), 0 0 50px var(--main-color), 0 0 100px var(--main-color);
+  }
+
+
+
+
+
 /* Botao */
 .botao-inscrevase, .botao-sobre {
-    display: inline-block;
+
     padding: 1rem 2rem;
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
     transition: transform 0.3s ease;
+}
+
+.botoes-inc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .botao-inscrevase {
@@ -115,6 +174,18 @@ body {
 
 .botao-inscrevase:hover, .botao-sobre:hover {
     transform: translateY(-3px);
+}
+
+.cta-button{
+    padding: 1rem 2rem;
+border-radius: 3rem;
+background: linear-gradient(
+      270deg,#02f32a 10%,
+      #02f32a 100% )
+
+}
+.cta-button :hover {
+    transform: scale(1.05);
 }
 
 /* Sections */
@@ -139,6 +210,7 @@ section {
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0,0,0,0.1);
     transition: transform 0.3s ease;
+    border: 2px solid var(--primary-color)
 }
 
 .stat-card:hover, .feature-card:hover {
@@ -149,13 +221,17 @@ section {
     font-size: 2.5rem;
     color: var(--primary-color);
     margin-bottom: 1rem;
+   
 }
 
 /* Footer */
 .footer {
-    background-color: var(--dark-color);
+    background: linear-gradient(
+      270deg,#098ef3 10%,
+      #02f32a 100%);
     color: white;
     padding: 4rem 0 2rem;
+    box-shadow: 0 2px 5px hwb(113 0% 1% / 0.808);
 }
 
 .footer-content {
@@ -184,7 +260,7 @@ section {
 .footer-bottom {
     text-align: center;
     padding-top: 2rem;
-    border-top: 1px solid rgba(255,255,255,0.1);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 /* Desing responsivo */
