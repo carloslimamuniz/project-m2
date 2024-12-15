@@ -109,3 +109,11 @@ document.getElementById("btn-save").addEventListener("click", (event) => {
 document.getElementById("genericalButton").addEventListener("click", () => {
     projectInstance.listData();
 });
+
+const table = document.querySelector("table");
+const showProjectsButton = document.getElementById("genericalButton");
+
+showProjectsButton.addEventListener("click", () => {
+  // Alterna entre mostrar e ocultar a tabela
+  table.classList.toggle("show-table");
+});

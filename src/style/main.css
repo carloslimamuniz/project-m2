@@ -282,3 +282,50 @@ section {
         margin-left: 0;
     }
 }
+/* Estilização da tabela */
+table {
+    width: 100%;
+    max-width: 80rem;
+    border-collapse: collapse;
+    margin-top: 3rem;
+    display: none; /* A tabela inicia oculta */
+  }
+  
+  table th, table td {
+    border: 1px solid var(--dark-color);
+    padding: 1.5rem;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.6rem;
+  }
+  
+  table th {
+    background-color: var(--primary-color);
+    color: var(--light-color);
+    font-weight: 700;
+  }
+  
+  table td {
+    background-color: var(--background-color);
+    color: var(--text-color);
+  }
+  
+  table tr:nth-child(even) td {
+    background-color: var(--light-color);
+  }
+  
+  table tr:hover td {
+    background-color: var(--secondary-color);
+    color: var(--light-color);
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .button-49 {
+    margin: 2rem auto;
+  }
+  
+  /* Mostrar tabela */
+  .show-table {
+    display: table; /* Aplica-se quando a classe for adicionada */
+  }
+  
