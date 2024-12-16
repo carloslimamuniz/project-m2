@@ -10,12 +10,10 @@ Prioridades
 
 
 ATENÇÃO preciso que alguem faça: 
--a documentação  3
 -Melhore a navbar, ao clicar na logo voltar a pagina inicial, e seu estilo  2
 -coloque ou melhore as informanções na pagina inicial(index)  2
 -Adicione as redes sociais dos integrantes do grupo no footer de cada pagina, ou faça um poo para isso  1
--Veja qual vai ser do hackaton, e altere onde ele aparece(navabars, footers)  1
--E trabalhe ou finalize sua propria parte ...  3
+
 
 .............
 Matheus Pestana
