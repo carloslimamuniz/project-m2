@@ -15,37 +15,32 @@
   --danger-color: #e74c3c;
   --text-color: #333;
   --background-color: #f9f9f9;
-  /* font-size: 62.5%; */
 }
 
 body {
   font-size: 1rem;
   overflow-x: hidden;
+  background: linear-gradient(135deg, var(--primary-color) 25%, var(--accent-color) 75%);  font-family: 'Poppins', sans-serif;
 }
 
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 2rem;
   width: 100vw;
   justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
-  
   margin-block: 10rem;
-
+  border: #28282d;
 }
 
 h1 {
-  font-family: "Poppins";
   font-weight: 900;
-  margin-bottom: 6rem;
-  border: 2rem;
-  border-radius: 2rem;
-  background-color: #27ae60;
-  
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: var(--secondary-color);
+  color: var(--light-color);
 }
 
 form {
@@ -54,20 +49,18 @@ form {
   width: 100%;
   max-width: 70rem;
   justify-content: center;
-  background-color: var(--primary-color);
   align-items: center;
-
-  border: 2px solid transparent;
-  background-color: #27ae60;
-  border: #0381ff;
-  border-radius: 2rem;
+  padding: 2rem;
+  background-color: var(--primary-color);
+  border-radius: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border: 2rem #28282d;
 }
 
-
 label {
-  font-family: "Poppins" sans-serif;
   font-weight: 700;
   margin-block: 1rem;
+  color: var(--light-color);
 }
 
 form textarea,
@@ -75,40 +68,44 @@ input {
   width: 100%;
   max-width: 50rem;
   min-height: 4rem;
-  border-radius: 4px;
-  border: 1px solid #7e7e7e;
-  padding-inline: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--dark-color);
+  padding: 1rem;
+  margin-bottom: 1rem;
 }
 
-form textarea {
-  padding: 1rem;
+#toggleProjectButton,
+#btn-save {
+  width: 100%;
+  max-width: 50rem;
+  min-height: 4rem;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  font-weight: 700;
+  transition: background-color 0.3s ease;
 }
 
 #toggleProjectButton {
-  background-color: #94d9e6a1;
-  font-family: "Poppins";
+  background-color: var(--accent-color);
+  color: var(--light-color);
+}
 
-  width: 100%;
-  max-width: 50rem;
-  min-height: 4rem;
-  border-radius: 4px;
-  border: 1px solid gray;
-  cursor: pointer;
+#toggleProjectButton:hover {
+  background-color: var(--secondary-color);
 }
 
 #btn-save {
+  background-color: var(--light-color);
+  color: var(--dark-color);
   margin-top: 2rem;
-  width: 100%;
-  max-width: 50rem;
-  min-height: 4rem;
-  border-radius: 4px;
-  background-color: #fff;
-  border: 1px solid gray;
-  filter: brightness(0.9);
-  cursor: pointer;
 }
 
-/* CSS */
+#btn-save:hover {
+  background-color: var(--accent-color);
+  color: var(--light-color);
+}
+
 .button-86 {
   all: unset;
   width: 100px;
@@ -176,7 +173,6 @@ form textarea {
   transform: translate(0, 5%);
 }
 
-/* CSS */
 .button-49,
 .button-49:after {
   width: 150px;
@@ -184,16 +180,20 @@ form textarea {
   line-height: 78px;
   font-size: 20px;
   font-family: 'Bebas Neue', sans-serif;
-  background: linear-gradient(45deg, transparent 5%, #2ecc71 5%);
+  background: linear-gradient(45deg, transparent 5%, var(--primary-color) 5%);
   border: 0;
   color: #fff;
   letter-spacing: 3px;
-  box-shadow: 6px 0px 0px #00E6F6;
+  box-shadow: 6px 0px 0px var(--accent-color);
   outline: transparent;
   position: relative;
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  border-radius: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .button-49:after {
@@ -211,8 +211,8 @@ form textarea {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(45deg, transparent 3%, #00E6F6 3%, #00E6F6 5%, #2ecc71 5%);
-  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px #00E6F6;
+  background: linear-gradient(45deg, transparent 3%, var(--accent-color) 3%, var(--accent-color) 5%, var(--primary-color) 5%);
+  text-shadow: -3px -3px 0px #F8F005, 3px 3px 0px var(--accent-color);
   clip-path: var(--slice-0);
 }
 
@@ -276,4 +276,3 @@ form textarea {
     line-height: 88px;
   }
 }
-
