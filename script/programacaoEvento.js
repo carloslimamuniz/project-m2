@@ -58,8 +58,8 @@ class Mentor {
 
 // Criando mentores
 const mentors = [
-    new Mentor("Dr. Oscar the Grouch", "Diretor de Lixo", "Especialista em gestão de resíduos.", "../Assets/oscar de Vila Sésamo.png"),
-    new Mentor("Dr. Wall-e", "Ministro do Meio Ambiente", "16 anos de experiência em educação ambiental.", "../Assets/walle.png")
+    new Mentor("Dr. Oscar the Grouch", "Diretor de Lixo", "Especialista em gestão de resíduos.", "/project-m2-fork/src/Assets/oscar de Vila Sésamo.png"),
+    new Mentor("Dr. Wall-e", "Ministro do Meio Ambiente", "16 anos de experiência em educação ambiental.", "/project-m2-fork/src/Assets/walle.png")
 ];
 
 // Renderizando mentores no HTML
