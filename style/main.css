@@ -148,9 +148,9 @@ span {
 
 /* inicio Section */
 .inicio {
-  height: 100vh;
+  /* height: 100vh; */
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-    url("../Assets/imageminicial.jpeg") center/cover;
+    url("../src/assets/imageminicial.jpeg") center/cover;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -358,8 +358,9 @@ table tr:hover td {
 }
 
 /* Desing responsivo */
+
 @media (max-width: 768px) {
-  .nav-links {
+   .nav-links {
     display: none;
   }
 
@@ -378,14 +379,13 @@ table tr:hover td {
 
   .botao-sobre {
     margin-left: 0;
-  }
+    } 
 }
 
 @media screen and (max-width: 980px) {
   .nav-links {
     font-size: 0.9rem;
   }
-  
 }
 
 @media screen and (max-width: 768px) {
