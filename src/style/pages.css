@@ -300,9 +300,21 @@
     color: #555;
 }
 
+/* Responsividade */
+@media (max-width: 768px) {
+    .info-grid,
+    .stories-grid,
+    .projects-grid,
+    .schedule-grid {
+        grid-template-columns: 1fr;
+    }
 
-@media (max-width: 425px) {
-    h1 {
+    .mentor-item {
+        flex-direction: column;
         text-align: center;
+    }
+
+    .mentor-item img {
+        margin: 0 auto;
     }
 }
